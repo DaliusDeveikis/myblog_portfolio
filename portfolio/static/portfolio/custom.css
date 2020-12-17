@@ -1,0 +1,14 @@
+.medus {
+    text-align: center;
+    margin: auto;
+    padding: 70px 0;
+
+}
+.navbar {
+    position: absolute;
+    background: transparent!important;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid white;
+}
+

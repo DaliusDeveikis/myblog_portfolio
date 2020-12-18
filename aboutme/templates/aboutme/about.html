@@ -1,0 +1,17 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+    {% load static %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% for about in abouts %}
+    <ul>
+        {{ about.name|first }}
+    </ul>
+        <p> {{ about.profession }}</p>
+    {% endfor %}
+
+{% endblock %}

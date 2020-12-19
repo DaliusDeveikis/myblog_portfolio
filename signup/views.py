@@ -31,6 +31,9 @@ def loginuser(request):
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
             return render(request, 'signup/loginuser.html', {'form': AuthenticationForm(), 'error':'Username and password did not match!'})
+        else:
+            login(request, user)
+            return redirect('signup:currentsignup')
 
 
 def logoutuser(request):

@@ -1,16 +1,18 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 
-{% block content %}
-    <div class="blog_container">
-    <h2 class="blog_title">Dalius has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
 
+{% block content %}
+    <h2 class="blog_title">Dalius has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
     {% for blog in blogs %}
-        <a class="aaaa" href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
-        <div class="img_blog_height">
-        <img src="{{ blog.image.url }}" class="rounded float-left" alt="">
+        <div class="blog_container_in">
+            <img src="{{ blog.image.url }}" class="rounded float-left"
+                 height="200px" alt="">
+            <p>{{ blog.date|date:'M d Y'|upper }}</p>
+            <a class="ck-button_with-text" href="{% url 'blog:detail' blog.id %}"><h2
+                    id="blog_title">{{ blog.title }}</h2>
+            </a>
         </div>
-        <h5>{{ blog.date|date:'M d Y'|upper }}</h5>
     {% endfor %}
     </div>
 

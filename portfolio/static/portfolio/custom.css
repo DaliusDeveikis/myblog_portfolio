@@ -1,31 +1,14 @@
-.medus {
-    text-align: center;
-    margin: auto;
-    padding: 0px 0;
-
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.blog_container {
-    background-color: red;
+.nav-item a:hover {
+    cursor: grab;
 }
 
-.blog_title {
-    color: yellow;
-}
-
-.login_nav {
-    background-color: aquamarine;
-}
-
-.rounded {
-    position: relative;
-    /* top: -50%; */
-    top: 0;
-    left: auto;
-    width: 20%;
-    height: 20%;
-    background-size: cover;
-}
-.aaaa {
-    list-style-type: None;
+.text-red p {
+    padding-top: 20%;
+    margin-top: 10px;
+    font-family: 'Bungee Outline', cursive;
+    font-size: 35px;
 }

@@ -2,13 +2,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.nav-item a:hover {
-    cursor: grab;
-}
+/*.nav-item a:hover {*/
+/*    cursor: grab;*/
+/*}*/
 
 .text-red p {
-    padding-top: 20%;
-    margin-top: 10px;
     font-family: 'Bungee Outline', cursive;
     font-size: 35px;
 }

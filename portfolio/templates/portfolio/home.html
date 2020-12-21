@@ -3,21 +3,37 @@
 {% block content %}
     {% load static %}
 
-{#    {% for project in projects %}#}
-{#        <h4>{{ project.title }}</h4>#}
-{##}
-{#        {% if project.url %}#}
-{#            <br>#}
-{#            <a href="{{ project.url }}">Link</a>#}
-{#        {% endif %}#}
-{##}
-{##}
-{##}
-{#    {% endfor %}#}
-
-
-
-
+    <!-- Background image -->
+    <div class="p-5 text-center bg-image"
+         style="background-image: url('{% static "portfolio/pexels-jan-kopřiva-3280908.jpg" %}');
+                 height: 100%;
+                 background-position: center;
+                 background-repeat: no-repeat;
+                 background-size: cover;">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-red">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/A8g0Ss62QN4?autoplay=1&cc_load_policy=1" allow="autoplay"></iframe>
+                    </div>
+                    <p style="color: whitesmoke">Source code for my first Django website</p>
+                    <br>
+                    <a class="white" style="color: whitesmoke"><i class="fas fa-long-arrow-alt-down fa-2x"></i></a>
+                    <br>
+                    <br>
+                    <a class="btn btn-outline-light btn-lg" href="https://github.com/DaliusDeveikis/myblog_portfolio"
+                       target="_blank" role="button"><i class="fab fa-github"></i></a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 {% endblock %}

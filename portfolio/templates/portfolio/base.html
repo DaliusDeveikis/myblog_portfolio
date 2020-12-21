@@ -21,12 +21,12 @@
           integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title>Pythonblog.lt</title>
 </head>
-<body>
+<body style="background-image: url({% static 'portfolio/112.svg' %})">
 {% load static %}
 
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
             <i class="fab fa-python"></i>
@@ -40,6 +40,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
+{#                    <button type="submit" class="btn btn-link" href="{% url 'blog:all_blogs' %}" style="background-color: #E27D60">Blog</button>#}
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about:about' %}">About</a>
@@ -56,7 +57,7 @@
                     </li>
                     <form action="{% url 'signup:logoutuser' %}" method="POST">
                         {% csrf_token %}
-                        <button type="button" class="btn btn-success">Logout</button>
+                        <button type="button" class="btn" style="background-color:#E27D60">Logout</button>
                     </form>
                 </ul>
             {% else %}
@@ -80,48 +81,21 @@
 </nav>
 
 
-<!-- Background image -->
-<div class="p-5 text-center bg-image"
-     style="background-image: url('{% static "portfolio/pexels-jan-kopřiva-3280908.jpg" %}');
-             height: 100%;
-             background-position: center;
-             background-repeat: no-repeat;
-             background-size: cover;">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
-        <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-red">
-                <p style="color: whitesmoke">Source code for my first Django website</p>
-                <br>
-                <a class="white" style="color: whitesmoke"><i class="fas fa-long-arrow-alt-down fa-2x"></i></a>
-                <br>
-                <br>
-                <a class="btn btn-outline-light btn-lg" href="https://github.com/DaliusDeveikis/myblog_portfolio"
-                   target="_blank" role="button"><i class="fab fa-github"></i></a>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
-</div>
 
 {% block content %}
 {% endblock %}
 
 <!-- Footer -->
-<footer class="bg-light text-center text-lg-start">
+<footer class="bg-light text-center text-lg-start" style="position: fixed; width: 100%; bottom: 0;">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
         <form action="">
             <!--Grid row-->
-            <div class="row">
+            <div class="row" style="position: center">
                 <!--Grid column-->
                 <div class="col-auto mb-4 mb-md-0">
-                    <p class="pt-2"><strong>Sign up for our newsletter</strong></p>
+                    <p class="pt-2" style="font-size: larger"><strong>Get in Touch</strong></p>
+                    {{ error }}
                 </div>
                 <!--Grid column-->
 
@@ -138,7 +112,7 @@
                 <!--Grid column-->
                 <div class="col-auto mb-4 mb-md-0">
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary mb-4">Subscribe</button>
+                    <button type="submit" class="btn btn-primary mb-1" style="background-color:#E27D60 ; color: whitesmoke;">PRESS ME</button>
                 </div>
                 <!--Grid column-->
             </div>

@@ -25,7 +25,7 @@ SECRET_KEY = 'r9(6^cv$c_wlvop+h#woo-2idsks%)ia_bbwub29v$7ljr+*j+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['idalux.pythonanywhere.com']
+ALLOWED_HOSTS = ['pythonblogs.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
